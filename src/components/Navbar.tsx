@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ShoppingBag, Menu, X, ChevronDown, Sun, Moon, Check } from "lucide-react";
+import { ShoppingCart, Menu, X, ChevronDown, Sun, Moon, Check } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
 import { Logo } from "./brand/Logo";
 import { Garment } from "./brand/Garment";
@@ -150,7 +150,7 @@ export function Navbar() {
               onClick={() => setOpen(true)}
               className={`group relative flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition-all ${chip}`}
             >
-              <ShoppingBag size={17} className="transition-transform group-hover:-rotate-6" />
+              <ShoppingCart size={17} className="transition-transform group-hover:scale-110" />
               <span className="hidden sm:inline">{t("nav.cart")}</span>
               <AnimatePresence>
                 {count > 0 && (
